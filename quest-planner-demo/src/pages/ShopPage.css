@@ -1,0 +1,34 @@
+.shop-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100svh - 80px);
+}
+
+.shop-construction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  padding: 40px 24px;
+}
+
+.shop-icon {
+  font-size: 56px;
+  margin-bottom: 8px;
+}
+
+.shop-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #3d3530;
+  margin-bottom: 4px;
+}
+
+.shop-desc {
+  font-size: 13px;
+  color: #a89890;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,234 @@
+.ag-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(61, 53, 48, 0.35);
+  z-index: 200;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.ag-sheet {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  border-radius: 20px 20px 0 0;
+  padding: 12px 24px 40px;
+  animation: agSlideUp 0.22s ease;
+}
+
+@keyframes agSlideUp {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+.ag-handle {
+  width: 40px;
+  height: 4px;
+  background: #e0d9d0;
+  border-radius: 2px;
+  margin: 0 auto 20px;
+}
+
+.ag-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #3d3530;
+  margin: 0 0 24px;
+}
+
+.ag-field {
+  margin-bottom: 18px;
+}
+
+.ag-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #a89890;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+.ag-input {
+  width: 100%;
+  height: 44px;
+  border: 1.5px solid #e8e2d9;
+  border-radius: 10px;
+  padding: 0 14px;
+  font-size: 15px;
+  color: #3d3530;
+  background: #faf8f4;
+  font-family: inherit;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.15s;
+}
+.ag-input:focus { border-color: #3d3530; }
+.ag-input::placeholder { color: #c8bdb5; }
+
+/* 날짜 범위 */
+.ag-date-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ag-date-input {
+  flex: 1;
+  height: 44px;
+  border: 1.5px solid #e8e2d9;
+  border-radius: 10px;
+  padding: 0 10px;
+  font-size: 14px;
+  color: #3d3530;
+  background: #faf8f4;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s;
+  min-width: 0;
+}
+.ag-date-input:focus { border-color: #3d3530; }
+
+.ag-tilde {
+  font-size: 16px;
+  color: #a89890;
+  flex-shrink: 0;
+}
+
+/* 시간 토글 버튼 */
+.ag-time-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 1.5px dashed #d4cdc5;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #a89890;
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.15s, color 0.15s;
+}
+.ag-time-toggle:hover { border-color: #3d3530; color: #3d3530; }
+
+/* 시간 필드 (텍스트 + 시계 + 제거) */
+.ag-time-field {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  border: 1.5px solid #e8e2d9;
+  border-radius: 10px;
+  background: #faf8f4;
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+.ag-time-field:focus-within { border-color: #3d3530; }
+
+.ag-time-text {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 15px;
+  color: #3d3530;
+  font-family: inherit;
+  padding: 0 12px;
+  min-width: 0;
+}
+.ag-time-text::placeholder { color: #c8bdb5; }
+
+.ag-time-pick-btn {
+  position: relative;
+  width: 36px;
+  height: 100%;
+  background: none;
+  border: none;
+  border-left: 1px solid #e8e2d9;
+  color: #a89890;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: color 0.15s, background 0.15s;
+}
+.ag-time-pick-btn:hover { color: #3d3530; background: #f0ebe4; }
+
+.ag-picker-hidden {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.ag-time-remove {
+  width: 36px;
+  height: 100%;
+  background: none;
+  border: none;
+  border-left: 1px solid #e8e2d9;
+  color: #c8bdb5;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  padding: 0;
+  transition: color 0.15s, background 0.15s;
+}
+.ag-time-remove:hover { color: #e94560; background: #fff0f2; }
+
+/* 색상 선택 */
+.ag-colors {
+  display: flex;
+  gap: 10px;
+}
+
+.ag-color-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2.5px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s, border-color 0.15s;
+}
+.ag-color-dot:hover { transform: scale(1.15); }
+.ag-color-dot.selected { border-color: #3d3530; transform: scale(1.15); }
+
+/* 버튼 */
+.ag-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.ag-btn-cancel,
+.ag-btn-save {
+  flex: 1;
+  height: 48px;
+  border-radius: 12px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.ag-btn-cancel {
+  background: #f0ebe4;
+  color: #a89890;
+}
+.ag-btn-cancel:hover { background: #e8e2d9; }
+
+.ag-btn-save {
+  background: #3d3530;
+  color: #ffffff;
+}
+.ag-btn-save:hover { background: #2a2320; }
+.ag-btn-save:disabled { opacity: 0.4; cursor: default; }
