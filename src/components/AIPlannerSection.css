@@ -1,0 +1,127 @@
+.ai-planner-section {
+  background: #ffffff;
+  border: 1px solid #e8e2d9;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 24px;
+  box-shadow: 0 2px 8px rgba(61, 53, 48, 0.06);
+}
+
+.ai-planner-header {
+  margin-bottom: 14px;
+}
+
+.ai-planner-title {
+  display: block;
+  font-size: 15px;
+  font-weight: 800;
+  color: #3d3530;
+  margin-bottom: 4px;
+}
+
+.ai-planner-desc {
+  display: block;
+  font-size: 13px;
+  color: #a89890;
+}
+
+.ai-input {
+  width: 100%;
+  padding: 14px 16px;
+  background: #faf8f4;
+  border: 1px solid #d4cdc5;
+  border-radius: 12px;
+  color: #3d3530;
+  font-size: 14px;
+  resize: none;
+  outline: none;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+.ai-input:focus { border-color: #e94560; }
+.ai-input::placeholder { color: #c8bdb5; }
+
+.btn-primary.full { width: 100%; }
+
+.ai-error {
+  margin-top: 12px;
+  padding: 12px;
+  background: rgba(233, 69, 96, 0.06);
+  border: 1px solid rgba(233, 69, 96, 0.3);
+  border-radius: 8px;
+  color: #c0392b;
+  font-size: 13px;
+}
+
+.no-key-notice {
+  text-align: center;
+  padding: 28px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.notice-icon { font-size: 40px; margin-bottom: 8px; }
+.notice-text { font-size: 15px; font-weight: 600; color: #3d3530; }
+.notice-sub { font-size: 13px; color: #a89890; margin-bottom: 12px; }
+
+.suggestions { margin-top: 20px; }
+
+.suggestions-header {
+  font-size: 14px;
+  font-weight: 600;
+  color: #8c7d73;
+  margin-bottom: 10px;
+}
+
+.suggestions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: #faf8f4;
+  border: 1px solid #e8e2d9;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+  color: #3d3530;
+}
+
+.suggestion-item:hover { border-color: #e94560; }
+
+.suggestion-item.selected {
+  border-color: #00a884;
+  background: rgba(0, 168, 132, 0.04);
+}
+
+.suggestion-check {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #d4cdc5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.suggestion-check.checked {
+  background: #00a884;
+  border-color: #00a884;
+}

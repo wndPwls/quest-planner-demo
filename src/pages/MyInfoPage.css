@@ -1,0 +1,383 @@
+.myinfo-page {
+  padding-bottom: 100px;
+}
+
+.myinfo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.myinfo-header .page-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #3d3530;
+}
+
+.settings-btn {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+.settings-btn:hover { opacity: 1; }
+
+/* 카드 공통 */
+.myinfo-card {
+  background: #ffffff;
+  border: 1px solid #e8e2d9;
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px rgba(61, 53, 48, 0.05);
+}
+
+/* 프로필 카드 */
+.profile-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+/* 프로필 사진 */
+.avatar-wrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.avatar-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+  border-radius: 50%;
+}
+
+.avatar-wrapper:hover .avatar-overlay {
+  opacity: 1;
+}
+
+/* 프로필 텍스트 영역 */
+.myinfo-profile-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.myinfo-name-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.myinfo-name {
+  font-size: 20px;
+  font-weight: 800;
+  color: #3d3530;
+}
+
+.edit-btn {
+  background: none;
+  border: none;
+  padding: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+}
+.edit-btn:hover { opacity: 1; }
+
+.myinfo-status-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 4px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.myinfo-status-label { font-size: 12px; color: #8c7d73; }
+
+.myinfo-follow-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.myinfo-follow-stat {
+  font-size: 12px;
+  color: #8c7d73;
+}
+
+.myinfo-follow-num {
+  font-weight: 700;
+  color: #3d3530;
+}
+
+.myinfo-email {
+  font-size: 13px;
+  color: #a89890;
+  margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.myinfo-bio {
+  font-size: 13px;
+  color: #6b5e57;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.myinfo-level-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: linear-gradient(135deg, #e94560, #c0392b);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 20px;
+  margin-top: 4px;
+}
+
+/* 편집 폼 */
+.myinfo-edit-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.edit-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.edit-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #a89890;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.edit-input {
+  padding: 8px 12px;
+  background: #faf8f4;
+  border: 1px solid #d4cdc5;
+  border-radius: 8px;
+  color: #3d3530;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+.edit-input:focus { border-color: #e94560; }
+.edit-input::placeholder { color: #c8bdb5; }
+
+.status-options {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.status-option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  background: #faf8f4;
+  border: 1px solid #d4cdc5;
+  border-radius: 20px;
+  font-size: 12px;
+  font-family: inherit;
+  color: #6b5e57;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.status-option:hover { border-color: #a89890; }
+.status-option.selected {
+  border-color: #3d3530;
+  background: #3d3530;
+  color: #fff;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+/* XP */
+.myinfo-xp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.myinfo-section-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #8c7d73;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.myinfo-xp-num { font-size: 12px; color: #a89890; }
+
+.myinfo-xp-track {
+  background: #f0ebe4;
+  border-radius: 8px;
+  height: 8px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.myinfo-xp-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #f4c430, #e8a800);
+  border-radius: 8px;
+  transition: width 0.5s ease;
+  box-shadow: 0 0 6px rgba(244, 196, 48, 0.4);
+}
+
+.myinfo-xp-next { font-size: 12px; color: #a89890; }
+
+
+/* 명언 카드 */
+.quote-card {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.quote-text {
+  font-size: 15px;
+  color: #6b5e57;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.quote-author {
+  font-size: 13px;
+  color: #a89890;
+}
+
+/* 업적 */
+.myinfo-achievements {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.myinfo-achievement {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.myinfo-achievement-icon { font-size: 22px; }
+.myinfo-achievement-name { font-size: 14px; color: #3d3530; font-weight: 500; }
+.myinfo-achievement-date { font-size: 11px; color: #a89890; margin-top: 1px; }
+
+/* 마일스톤 */
+.myinfo-milestones { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.myinfo-milestone-badge {
+  background: rgba(232, 98, 26, 0.08);
+  border: 1px solid #e8621a;
+  color: #e8621a;
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* 좋아요한 글 */
+.myinfo-liked-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.myinfo-liked-post {
+  background: #faf8f4;
+  border: 1px solid #e8e2d9;
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.myinfo-liked-post:hover {
+  border-color: #c8bdb5;
+  background: #f5f0e8;
+}
+
+.myinfo-liked-post-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.myinfo-liked-post-author {
+  font-size: 13px;
+  font-weight: 700;
+  color: #3d3530;
+}
+
+.myinfo-liked-post-time {
+  font-size: 11px;
+  color: #c8bdb5;
+}
+
+.myinfo-liked-post-content {
+  font-size: 13px;
+  color: #6b5e57;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
